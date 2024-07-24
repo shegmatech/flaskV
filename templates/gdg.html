@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="column" >
+        <br>
+        <h2>Welcome to the Excel Chunk Splitter!</h2>
+        <h4>Simplifying Large Excel File Management for the Finance Department</h4>
+
+        <!-- Overview  -->
+        <h3>Overview</h3>
+        <ul>
+            <li>Purpose: Manage large Excel files efficiently.</li>
+            <br>
+            <li>Features:</li>
+            <ul>
+                <li>Easy file upload and processing.</li>
+                <li>Splits large Excel files into smaller chunks (3500 rows each).</li>
+                <li>Ensures data integrity with consistent formatting.</li>
+                <li>Quick file download with organized sheets.</li>
+            </ul>
+        </ul>
+
+
+        <!-- How it works  -->
+        <h3>How It Works</h3>
+        <ol>
+            <li>Upload Your File:</li>
+            <ul>
+                <li>Select and upload your Excel file (.xlsx) on the homepage.</li>
+            </ul>
+            <br>
+            <li>Processing:</li>
+            <ul>
+                <li>Automatically splits the file into chunks.</li>
+                <li>Saves each chunk as a separate sheet within the same file.</li>
+            </ul>
+            <li>Download:</li>
+            <ul>
+                <li>Automatic download of the processed file with organized sheets.</li>
+            </ul>
+        </ol>
+        
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="column" style="background-color:#eb9b9b;">
+        <br><br>
+        <h2>Upload Excel File</h2>
+        <form action="/" method="post" enctype="multipart/form-data" class="mb-4">
+            <input type="file" name="file" accept=".xlsx" class="mb-2 p-2 border rounded">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Upload and Process
+            </button>
+          </form>
+        <p>{{message}}</p>
+    </div>
+</div>
+{% endblock %}
